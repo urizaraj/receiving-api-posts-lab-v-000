@@ -32,8 +32,10 @@
       var posting = $.post('/products', values);
 
       posting.done(function(data) {
-        $("#postTitle").text(data["title"]);
-        $("#postBody").text(data["description"]);
+        $("#productName").text(data["title"]);
+        $("#productDescription").text(data["description"]);
+        $("#productPrice").text(data["price"]);
+        $("#productInventory").text(data["inventory"]);
       });
     });
   });
